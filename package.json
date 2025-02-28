@@ -15,11 +15,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/node": "^18.0.3",
+    "@types/uuid": "^8.3.4",
     "parcel": "^2.6.2",
     "process": "^0.11.10",
     "sharp": "^0.29.3",
-    "@types/uuid": "^8.3.4",
     "typescript": "^5.1.6"
   },
   "dependencies": {

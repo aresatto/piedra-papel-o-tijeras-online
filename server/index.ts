@@ -4,14 +4,16 @@ import { DATA_BASE, RTDB } from './firestore';
 import { v4 as uuid } from 'uuid';
 
 const APP = express();
+
 APP.use(cors());
-const PORT = process.env.PORT || 3000; // Utiliza la variable de entorno PORT proporcionada por Rende
+APP.use(express.json());
+const PORT = process.env.PORT || 3000;
 
 function main() {
-  APP.listen(PORT, () => console.log(`inizalite in http://localhost:${PORT}`));
-  APP.use(express.static('dist'));
-  const playersCollection = DATA_BASE.collection('players');
-  const playRoomsCollection = DATA_BASE.collection('playrooms');
+	APP.listen(PORT, () => console.log(`inizalite in http://localhost:${PORT}`));
+	APP.use(express.static('dist'));
+	const playersCollection = DATA_BASE.collection('players');
+	const playRoomsCollection = DATA_BASE.collection('playrooms');
 
 	APP.post('/player', (req, res) => {
 		const { name } = req.body;
