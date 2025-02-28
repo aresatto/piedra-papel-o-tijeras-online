@@ -1,0 +1,9 @@
+GNU nano 7.2                       
+node_modules
+.parcel-cache
+dist
+.env
+index.js
+
+
+
