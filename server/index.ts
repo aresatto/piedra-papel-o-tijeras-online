@@ -4,10 +4,8 @@ import { DATA_BASE, RTDB } from './firestore';
 import { v4 as uuid } from 'uuid';
 
 const APP = express();
-
 APP.use(cors());
-APP.use(express.json());
-const PORT = process.env.PORT || 4000; 
+const PORT = process.env.PORT || 3000; // Utiliza la variable de entorno PORT proporcionada por Rende
 
 function main() {
   APP.listen(PORT, () => console.log(`inizalite in http://localhost:${PORT}`));
